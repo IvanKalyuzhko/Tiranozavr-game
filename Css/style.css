@@ -1,0 +1,55 @@
+.game {
+    width: 600px;
+    height: 200px;
+    border-bottom: 1px solid black;
+    margin: auto;
+}
+
+#dino {
+    width: 50px;
+    height: 50px;
+    background-image: url('../images/pngwing.com.png');
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+    left: 50px;
+}
+#cactus{
+    width: 30px;
+    height: 40px;
+    background-image: url('../images/pngegg.png');
+    background-size: 30px 40px;
+    position: relative;
+    top: 110px;
+    left: 550px;
+    animation: cactusMov 2s infinite linear /*infinite - анімація буде відбуватись безкінечно*//*linear - анімація буде прискорюватись */
+}
+@keyframes cactusMov {/*@keyframes - директива за допомогою якої відбувається анімація*/
+    0%{/*початкове положення анімації*/
+        left:580px
+    }
+    100%{/*придання наступного значення/кінцевого положення анімації*/
+        left: 0px
+    }
+}
+
+.jump {
+    animation: jump 0.8s linear;
+}
+@keyframes jump {/*@keyframes - директива за допомогою якої відбувається анімація*/
+    0%{/*початкове положення анімації*/
+        top:150px
+    }
+    30%{
+        top:80px
+    }
+    50%{
+        top:50px
+    }
+    80%{
+        top:80px
+    }
+    100%{/*придання наступного значення/кінцевого положення анімації*/
+        top: 150px
+    }
+}
